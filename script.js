@@ -1,4 +1,4 @@
-const DISCORD_TOKEN = 'MTI1ODM3MTE0MjI2MDA5NzA1Ng.Gi0ORr.z_0Qecfr4Lbxz2PdPIxo_YaViRqkyMPz3CZ-oI';
+const DISCORD_TOKEN = 'Njk2MzU3OTM5MTUzMzM4NDI5.G65AWV.KfbxHlItFUfjlMn7SWiyxhF_i8mfjQLiTdvRMk';
 let validLinks = [];
 
 async function checkLink(link) {
@@ -14,7 +14,7 @@ async function checkLink(link) {
 
         if (response.ok) {
             const data = await response.json();
-            return !data.consumed ? 'válido' : 'inválido';
+            return !data.redeemed ? 'válido' : 'inválido';
         } else {
             return 'inválido';
         }
