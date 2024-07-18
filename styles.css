@@ -6,46 +6,61 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #6d5b97, #6d5b97, #8e44ad, #6d5b97, #6d5b97);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    color: white;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 #container {
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 600px;
+    text-align: center;
 }
 
 h2 {
     margin-top: 0;
-    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 textarea {
     width: 100%;
     height: 150px;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 8px;
     border: 1px solid #ccc;
     resize: none;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #218838;
 }
 
 #results {
@@ -55,36 +70,36 @@ button:hover {
 .result-item {
     margin: 5px 0;
     padding: 10px;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ddd;
+    text-align: left;
 }
 
 #summary {
     margin-top: 20px;
     font-weight: bold;
-    text-align: center;
 }
 
 #loading {
     display: none;
     margin-top: 10px;
-    text-align: center;
 }
 
 #downloadBtn {
     display: none;
     width: 100%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 #downloadBtn:hover {
-    background-color: #218838;
-  }
+    background-color: #0056b3;
+}
