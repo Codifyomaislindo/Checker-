@@ -1,11 +1,4 @@
-function decodeToken(encoded) {
-    const charCodeArray = encoded.split(',').map(code => parseInt(code));
-    return String.fromCharCode(...charCodeArray);
-}
-
-const encodedToken = '77,84,73,53,79,77,51,77,84,69,48,77,84,73,50,77,68,65,53,78,103,46,71,105,48,79,82,114,46,122,95,48,81,101,99,102,114,52,76,98,120,122,50,80,100,80,73,120,111,95,89,97,86,105,82,113,107,121,77,80,122,51,67,90,45,111,73';
-
-const DISCORD_TOKEN = decodeToken(encodedToken);
+const DISCORD_TOKEN = 'MTI1ODM3MTE0MjI2MDA5NzA1Ng.Gi0ORr.z_0Qecfr4Lbxz2PdPIxo_YaViRqkyMPz3CZ-oI';
 let validLinks = [];
 
 async function checkLink(link) {
@@ -88,4 +81,4 @@ function downloadValidLinks() {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    }
+                                                     }
